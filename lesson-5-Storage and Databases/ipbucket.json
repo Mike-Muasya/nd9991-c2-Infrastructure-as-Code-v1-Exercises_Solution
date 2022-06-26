@@ -6,13 +6,13 @@
             "Effect": "Allow",
             "Principal": "*",
             "Action": "s3:*",
-            "Resource": "arn:aws:s3:::cloudpointers.com/*",
+            "Resource": "arn:aws:s3:::hangover/*",
             "Condition": {
                 "IpAddress": {
-                    "aws:SourceIp": "178.148.109.0/24"
+                    "aws:SourceIp": "192.168.0.28/32"
                 },
                 "NotIpAddress": {
-                    "aws:SourceIp": "178.148.109.222"
+                    "aws:SourceIp": "192.168.0.28"
                 }
             }
         }

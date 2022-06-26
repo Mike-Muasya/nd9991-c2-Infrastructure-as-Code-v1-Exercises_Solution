@@ -18,14 +18,14 @@ Resources:
       DBSubnetGroupName: "Subnet Group"
       # Replace these IDs, as applicable to you
       SubnetIds:
-      - subnet-045e261987a91fa63
-      - subnet-056e13b0a88c48a92
+      - subnet-0cf06c30133e1e129
+      - subnet-046532a60313c042f
   # Choose a name of your choice    
   MyDB: 
     Type: "AWS::RDS::DBInstance"
     Properties: 
       # Replace this ID, as applicable to you. I have used the default SG. 
-      VPCSecurityGroups: [sg-031783deb58005940]
+      VPCSecurityGroups: [sg-0cf82774034f287ff]
       PubliclyAccessible: false
       MultiAZ: false
       AllocatedStorage: 20
@@ -37,5 +37,5 @@ Resources:
       Tags: 
         - 
           Key: "Name"
-          Value: !Sub "${EnvironmentName} MS SQL RDS"
+          Value: !Sub "${EnvironmentName} MySQL RDS"
     DeletionPolicy: "Retain"
